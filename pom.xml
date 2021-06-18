@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zwb.study</groupId>
+    <artifactId>zwb</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>zwb-redis</module>
+        <module>zwb-entity</module>
+        <module>zwb-eureka1</module>
+        <module>zwb-eureka2</module>
+        <module>zwb-core</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <!--spring-cloud版本 但是如果第一次使用的，Maven会下载一下-->
+        <!--<spring-cloud.version>Greenwich.SR1</spring-cloud.version>-->
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
+    </properties>
+
+    <!--导入SpringBoot的依赖-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.6</version>
+        <relativePath/>
+    </parent>
+
+    <build>
+        <plugins>
+            <!--SpringBoot打包插件  jar  java -jar jar包-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
